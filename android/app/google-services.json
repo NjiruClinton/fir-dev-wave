@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "965316152838",
+    "project_id": "fir-development-191f6",
+    "storage_bucket": "fir-development-191f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965316152838:android:6f9e303b108179d4413d87",
+        "android_client_info": {
+          "package_name": "com.example.wave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965316152838-34ja7kbbbsb20n7mr76q4d4abiqdg2dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAEG3B67-Q764na_vbhixdWXgmPdlLLl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965316152838-34ja7kbbbsb20n7mr76q4d4abiqdg2dq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "965316152838-9jpofq4rgl4ec5uiimv9pud7toe472vh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wave"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
