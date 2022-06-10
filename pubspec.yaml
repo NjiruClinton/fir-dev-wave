@@ -36,11 +36,13 @@ dependencies:
   google_sign_in: ^5.2.1
   email_validator: ^2.0.1
   flutter_launcher_icons: ^0.9.2
+  flutter_share: ^2.0.0
+  share_plus: ^4.0.7
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/w1.png"
+  image_path: "assets/images/sales1.jpg"
 
 
 
@@ -71,8 +73,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
