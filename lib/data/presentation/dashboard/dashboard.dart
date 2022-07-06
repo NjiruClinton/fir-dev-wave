@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wave/data/presentation/dashboard/navbar.dart';
+import 'package:wave/pages/homepage.dart';
 
 import '../../../bloc/auth_bloc.dart';
 import '../sign_in/sign_in.dart';
@@ -168,23 +169,14 @@ class Dashboard extends StatelessWidget {
 
 class Sales extends StatelessWidget {
 
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sales'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
-      ),
-    );
+
+    return HomePage();
   }
 }
+
 
 class Inv extends StatelessWidget {
 
