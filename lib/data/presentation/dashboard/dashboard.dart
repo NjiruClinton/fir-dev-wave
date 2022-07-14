@@ -3,11 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wave/data/presentation/applyjob.dart';
 import 'package:wave/data/presentation/dashboard/navbar.dart';
-import 'package:wave/pages/homepage.dart';
-
+import 'package:wave/models/jobss.dart';
 import '../../../bloc/auth_bloc.dart';
 import '../sign_in/sign_in.dart';
+
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -44,7 +45,7 @@ class Dashboard extends StatelessWidget {
                     width: 160.0,
                     height: 160.0,
                     child: Card(
-                      color: Color.fromARGB(255, 21, 21, 21),
+                      color: Colors.black,
                       elevation: 2.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0)
@@ -54,9 +55,9 @@ class Dashboard extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Image.asset("assets/sale.png", width: 64.0,),
+                              Image.asset("assets/job.png", width: 64.0,),
                               SizedBox(height: 10.0,),
-                              Text("Sales", style: TextStyle(
+                              Text("Popular Jobs", style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20.0
@@ -95,7 +96,7 @@ class Dashboard extends StatelessWidget {
                             children: [
                               Image.asset("assets/inv.png", width: 64.0,),
                               SizedBox(height: 10.0,),
-                              Text("Inventory", style: TextStyle(
+                              Text("Recent Jobs", style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0
@@ -117,44 +118,6 @@ class Dashboard extends StatelessWidget {
                          MaterialPageRoute(builder: (context) => Inv()));
                    },
                  ),
-                 GestureDetector(child: SizedBox(
-                    width: 160.0,
-                    height: 160.0,
-                    child: Card(
-                      color: Color.fromARGB(255, 21, 21, 21),
-                      elevation: 2.0,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0)
-                      ),
-                      child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Image.asset("assets/ecomm.png", width: 64.0,),
-                              SizedBox(height: 10.0,),
-                              Text("E-commerce", style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0
-                              ),),
-                              SizedBox(height: 5.0, ),
-                              Text("1 Items", style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w100,
-                              ),)
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                   onTap: () {
-                     Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => Ecomm()));
-                   },
-                 ),
 
                 ],
               ),
@@ -172,8 +135,7 @@ class Sales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    return HomePage();
+    return ApplyJob();
   }
 }
 
@@ -184,16 +146,9 @@ class Inv extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Inventory'),
+        title: const Text('Top Jobs'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
-      ),
+      body: JobList(),
     );
   }
 }
@@ -205,14 +160,6 @@ class Ecomm extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('E-commerce'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
       ),
     );
   }
