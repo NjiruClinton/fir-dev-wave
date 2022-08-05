@@ -20,7 +20,7 @@ flutter_icons:
 ```
 ```$ pub get```
 
-![App screenshot](/assets/screenshot.jpeg)
+
 
 ##  firebase_auth
 - download *google-services.json* from **firebase console**
