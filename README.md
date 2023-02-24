@@ -24,6 +24,11 @@ flutter_icons:
 
 ##  firebase_auth
 - download *google-services.json* from **firebase console**
+- still in the android - build.gradle(app) run 
+
+```
+./gradlew signinReport
+```
 
 - get SHA-1 and SHA-256 from running *build.gradle* then go to *gradle -> android -> app -> task -> signingReport*
 
